@@ -6,6 +6,8 @@
 
 package periodico;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lguerrer17
@@ -28,21 +30,209 @@ public class EjercicioSeis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtE = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtP = new javax.swing.JTextField();
+        txtC = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtM = new javax.swing.JTextArea();
+        jPanel4 = new javax.swing.JPanel();
+        cmdB = new javax.swing.JButton();
+        cmdR = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Periodico");
+        setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel1.setText("Cantidad de colores");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+
+        txtE.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtE.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 50, -1));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel2.setText("Cantidad de palabras");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel3.setText("Cantidad de espacios");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        txtP.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 50, -1));
+
+        txtC.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtC, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 50, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, 110));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Monto a pagar", 0, 0, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtM.setEditable(false);
+        txtM.setColumns(20);
+        txtM.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtM.setRows(5);
+        jScrollPane1.setViewportView(txtM);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 27, 109, 77));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Botones", 0, 0, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cmdB.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        cmdB.setText("Borrar");
+        cmdB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBActionPerformed(evt);
+            }
+        });
+        jPanel4.add(cmdB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
+
+        cmdR.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        cmdR.setText("Resolver");
+        cmdR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdRActionPerformed(evt);
+            }
+        });
+        jPanel4.add(cmdR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 290, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBActionPerformed
+        // TODO add your handling code here:
+        txtC.setText("");
+        txtE.setText("");
+        txtM.setText("");
+        txtP.setText("");
+        txtP.requestFocusInWindow();
+    }//GEN-LAST:event_cmdBActionPerformed
+
+    private void txtPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPKeyTyped
+
+    private void txtEKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtEKeyTyped
+
+    private void txtCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCKeyTyped
+
+    private void cmdRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdRActionPerformed
+        // TODO add your handling code here:
+        String m;
+        double pa, co, mo, es, me, mc, mp;
+        
+        if (txtP.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Digite el número de palabras", "Error", JOptionPane.ERROR_MESSAGE);
+            txtP.requestFocusInWindow();
+        }
+        
+        else if (txtE.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Digite el número de espacios", "Error", JOptionPane.ERROR_MESSAGE);
+            txtE.requestFocusInWindow();
+        }
+        
+        else if (txtC.getText().trim().isEmpty()){
+             JOptionPane.showMessageDialog(this, "Digite el número de colores", "Error", JOptionPane.ERROR_MESSAGE);
+            txtC.requestFocusInWindow();
+        }
+        
+        else {
+
+            pa = Double.parseDouble(txtP.getText());
+            co = Double.parseDouble(txtC.getText());
+            es = Double.parseDouble(txtE.getText());
+
+            if (pa == 0) {
+                JOptionPane.showMessageDialog(this, "No se puede colocar cero", "Error", JOptionPane.ERROR_MESSAGE);
+                txtP.requestFocusInWindow();
+            } else if (es == 0) {
+                JOptionPane.showMessageDialog(this, "No se puede colocar cero", "Error", JOptionPane.ERROR_MESSAGE);
+                txtE.requestFocusInWindow();
+            } else if (co == 0) {
+                JOptionPane.showMessageDialog(this, "No se puede colocar cero", "Error", JOptionPane.ERROR_MESSAGE);
+                txtC.requestFocusInWindow();
+            }
+            else {
+                
+                mp = pa * 20000;
+                me = es * 15000;
+                mc = co * 25000;
+                
+                mo = mp + me + mc;
+                m = String.valueOf(mo);
+                txtM.setText(m);
+            }
+        }
+    }//GEN-LAST:event_cmdRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,5 +270,19 @@ public class EjercicioSeis extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdB;
+    private javax.swing.JButton cmdR;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField txtC;
+    private javax.swing.JTextField txtE;
+    private javax.swing.JTextArea txtM;
+    private javax.swing.JTextField txtP;
     // End of variables declaration//GEN-END:variables
 }
